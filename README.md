@@ -19,7 +19,7 @@
         - Create a real repository that actually makes HTTP requests. (Watch old clips on how to do that with AsyncTask)
 ### Phase 2
 - [ ] Basic search functionality
-    - [ ] The user should be able to search for books by parts of the titles and publication years
+    - [x] The user should be able to search for books by parts of the titles and publication years
     - [ ] The user should be able to sort the search result by titles and publication years
         - Implementation info:
         - The search functionality should be implemented in the repository class. It might be good to put the code in some concrete parent class that both the real and the mock-up repository classes extend.

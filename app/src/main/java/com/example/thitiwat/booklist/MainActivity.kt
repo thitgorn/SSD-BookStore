@@ -3,6 +3,7 @@ package com.example.thitiwat.booklist
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.SearchView
 import com.example.thitiwat.booklist.model.Book
 import com.example.thitiwat.booklist.model.DataBookRepository
 import com.example.thitiwat.booklist.model.MockBookRepository
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity(), BookView {
         BookView = BookPresenter(this, DataBookRepository())
         BookView.start()
 
+        syncSearchView(search_view)
+
     }
 
     override fun setBookList(books: ArrayList<Book>) {
@@ -32,5 +35,22 @@ class MainActivity : AppCompatActivity(), BookView {
 //
         var adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,array)
         list_view.adapter = adapter
+    }
+
+    fun syncSearchView(searchView: SearchView) {
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            override fun onQueryTextChange(newText: String): Boolean {
+//                BookView.repository.sortBook("title")
+                setBookList(BookView.repository.filterBook(newText))
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                setBookList(BookView.repository.filterBook(query))
+                return false
+            }
+
+        })
     }
 }

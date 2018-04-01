@@ -10,15 +10,10 @@ import java.net.URL
  * Created by thitiwat on 3/30/18.
  */
 class DataBookRepository: BookRepository() {
-    val bookList = ArrayList<Book>()
     override fun loadAllBooks() {
         bookList.clear()
         val task = DataBookLoader()
         task.execute()
-    }
-
-    override fun getBooks(): ArrayList<Book> {
-        return this.bookList
     }
 
     inner class DataBookLoader: AsyncTask<String, String, String>(){
