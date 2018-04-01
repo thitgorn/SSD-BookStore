@@ -20,7 +20,7 @@
 ### Phase 2
 - [ ] Basic search functionality
     - [x] The user should be able to search for books by parts of the titles and publication years
-    - [ ] The user should be able to sort the search result by titles and publication years
+    - [ ] 50% done || implement interface || The user should be able to sort the search result by titles and publication years
         - Implementation info:
         - The search functionality should be implemented in the repository class. It might be good to put the code in some concrete parent class that both the real and the mock-up repository classes extend.
 ### Phase 3
