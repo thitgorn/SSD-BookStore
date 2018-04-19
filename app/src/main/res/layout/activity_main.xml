@@ -7,11 +7,26 @@
     android:orientation="vertical"
     tools:context="com.example.thitiwat.booklist.MainActivity">
 
-    <SearchView
-        android:id="@+id/search_view"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search here" />
+        android:text="START USER ACTIVITY"
+        android:onClick="startUserActivity"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:queryHint="Search here">
+        </SearchView>
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/list_view"
