@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity(), BookView {
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 result.text = option.get(p2)
+                BookView.repository.sortBook(result.text.substring(8))
             }
 
         }

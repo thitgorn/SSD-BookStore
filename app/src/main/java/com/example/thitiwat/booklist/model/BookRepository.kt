@@ -18,8 +18,11 @@ abstract class BookRepository : Observable() {
 
     fun sortBook(query: String) {
         when(query.toLowerCase()) {
-            "title" -> bookList.sortBy { book -> book.title }
+            "name" -> bookList.sortBy { book -> book.title }
+            "year" -> bookList.sortBy { book -> book.publicationYear }
         }
+        setChanged()
+        notifyObservers()
     }
 
     fun filterBook(query : String): ArrayList<Book> {

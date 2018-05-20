@@ -18,13 +18,13 @@
         - Extract book repository interface from the mock-up one.
         - Create a real repository that actually makes HTTP requests. (Watch old clips on how to do that with AsyncTask)
 ### Phase 2
-- [ ] Basic search functionality
+- [x] Basic search functionality
     - [x] The user should be able to search for books by parts of the titles and publication years
-    - [ ] 50% done || implement interface || The user should be able to sort the search result by titles and publication years
+    - [x] The user should be able to sort the search result by titles and publication years
         - Implementation info:
         - The search functionality should be implemented in the repository class. It might be good to put the code in some concrete parent class that both the real and the mock-up repository classes extend.
 ### Phase 3
-- [ ] Basic account operations: check fund & add fund (all mock-up)
+- [x] Basic account operations: check fund & add fund (all mock-up)
 - [ ] Buy an e-book
     - [ ] A user can add e-book to the cart
     - [ ] A user can check-out all e-books in the cart. Don't forget to check if the user has enough fund in the account.
